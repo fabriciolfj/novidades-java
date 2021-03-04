@@ -13,13 +13,14 @@ public class Main {
         avaliarTipo(desenv);
         avaliarTipo(gerente);
         avalidarIdade(desenv);
-        avalidarIdade(gerente);
     }
 
     private static void avalidarIdade(Funcionario funcionario) {
         var resultado = switch (funcionario.getIdade()) {
             case 36, 40, 23, 35 -> "Medio";
-            case 20, 15 -> "Novo";
+            case 20, 15 -> {
+                yield "Novo";
+            }
             default ->  "velho";
         };
 
