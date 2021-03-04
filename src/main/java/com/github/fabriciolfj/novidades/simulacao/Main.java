@@ -13,6 +13,13 @@ public class Main {
         avaliarTipo(desenv);
         avaliarTipo(gerente);
         avalidarIdade(desenv);
+
+        String json = """
+                {
+                    "name":"mkyong",
+                    "age":38
+                }
+                """;
     }
 
     private static void avalidarIdade(Funcionario funcionario) {
